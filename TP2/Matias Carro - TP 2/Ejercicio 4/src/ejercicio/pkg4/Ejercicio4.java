@@ -22,12 +22,15 @@ public class Ejercicio4 {
             
                                              
             System.out.println("Ingrese el precio del producto");
-            precio = input.nextInt();
+            precio = Integer.parseInt(input.nextLine());
             
-            System.out.println("Ingrese la categoria del producto");
+            System.out.println("Ingrese la categoria del producto A, B o C en mayusculas");
             categoria = input.nextLine();
             
-            if(categoria )
+            if(categoria.equals("A")){
+                System.out.println("Descuento final aplicado: 10% \nEl precio final es:"+(precio-precio*0.10));                
+            }else if(categoria.equals("B")){
+                System.out.println("El precio final es:"+(precio-precio*0.15));
     }
     
 }
