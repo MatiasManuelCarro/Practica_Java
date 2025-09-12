@@ -28,7 +28,7 @@ public class Ejercicio4 {
             categoria = input.nextLine();
             
             if(categoria.equals("A")){
-                System.out.println("Descuento final aplicado: 10% \nEl precio final es:"+(precio-precio*0.10));                
+                System.out.println("Descuento final ñññ{uuúu aplicado: 10% \nEl precio final es:"+(precio-precio*0.10));                
             }else if(categoria.equals("B")){
                 System.out.println("El precio final es:"+(precio-precio*0.15));
     }
