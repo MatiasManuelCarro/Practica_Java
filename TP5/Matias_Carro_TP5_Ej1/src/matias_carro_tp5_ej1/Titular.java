@@ -12,17 +12,18 @@ public class Titular {
 
     private String nombre;
     private String dni;
-     private Pasaporte pasaporte;
+    private Pasaporte pasaporte;
 
     public Titular(String nombre, String dni) {
         this.nombre = nombre;
         this.dni = dni;
     }
-
+    
+  
     public Titular(String nombre) {
         this.nombre = nombre;
     }
-    
+
     public String getNombre() {
         return nombre;
     }
@@ -42,7 +43,7 @@ public class Titular {
             this.dni = dni;
         }
     }
-    
+
     public Pasaporte getPasaporte() {
         return pasaporte;
     }
@@ -51,5 +52,9 @@ public class Titular {
         this.pasaporte = pasaporte;
     }
 
+    @Override
+    public String toString() {
+        return "Nombre del Titular: " + nombre + " | dni: " + dni;
+    }
 
 }

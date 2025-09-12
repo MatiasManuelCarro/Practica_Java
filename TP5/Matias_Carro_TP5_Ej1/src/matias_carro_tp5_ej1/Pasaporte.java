@@ -15,13 +15,12 @@ public class Pasaporte {
     private Titular titular;
     private Foto foto;
 
-    public Pasaporte(String numero, String fechaEmision, Titular titular, Foto foto) {
+    public Pasaporte(String numero, String fechaEmision) {
         this.numero = numero;
         this.fechaEmision = fechaEmision;
-        this.titular = titular;
-        this.foto = foto;
     }
 
+    
     public String getNumero() {
         return numero;
     }
@@ -62,7 +61,7 @@ public class Pasaporte {
     
     @Override
     public String toString() {
-        return "Numero de pasaporte: "+numero+ " | Nombre del Titular: " + titular.getNombre() +" | dni: "+titular.getDni()+ " | fecha de emision: " + fechaEmision+ " | Foto: "+foto.getImagen()+foto.getFormato();
-    }
+        return "Numero de pasaporte: "+numero+ " | Fecha de emision: " + fechaEmision + " | " +  titular.toString()+" | Foto: "+foto.getImagen()+foto.getFormato();
+    } 
 
 }
