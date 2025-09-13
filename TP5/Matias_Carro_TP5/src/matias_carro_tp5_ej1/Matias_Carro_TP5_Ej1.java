@@ -19,14 +19,26 @@ public class Matias_Carro_TP5_Ej1 {
         Foto foto1 = new Foto("fotoMatias", ".JPG");
 
         Pasaporte pasaporte1 = new Pasaporte("00000001", "21/05/2024");
+        
+        
 
+        //Creando las relaciones 
         pasaporte1.setTitular(titular1);
         pasaporte1.setFoto(foto1);
         titular1.setPasaporte(pasaporte1);
-
-        System.out.println("test");
-
+        
+        //probando relaciones
+        System.out.println(pasaporte1.getTitular());
+        System.out.println(titular1.getPasaporte());
+        System.out.println(pasaporte1.getFoto());
+        System.out.println("\nMetodo toString:");
+        
+        //usando toString()
         System.out.println(pasaporte1);
+       
+        
+        
+       
 
     }
 

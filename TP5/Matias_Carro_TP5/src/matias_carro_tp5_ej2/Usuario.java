@@ -2,26 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package matias_carro_tp5_ej1;
+package matias_carro_ttp5_ej2;
 
 /**
  *
  * @author Matias
  */
-public class Titular {
-
+public class Usuario {
     private String nombre;
     private String dni;
-    private Pasaporte pasaporte;
+    private Celular celular;
+    
+    
 
-    public Titular(String nombre, String dni) {
+    public Usuario(String nombre, String dni) {
         this.nombre = nombre;
         this.dni = dni;
-    }
-    
-  
-    public Titular(String nombre) {
-        this.nombre = nombre;
     }
 
     public String getNombre() {
@@ -29,9 +25,7 @@ public class Titular {
     }
 
     public void setNombre(String nombre) {
-        if (nombre != null) {
-            this.nombre = nombre;
-        }
+        this.nombre = nombre;
     }
 
     public String getDni() {
@@ -39,22 +33,28 @@ public class Titular {
     }
 
     public void setDni(String dni) {
-        if (dni != null) {
-            this.dni = dni;
+        this.dni = dni;
+    }
+    
+    // aca comienzan las relaciones
+
+    public Celular getCelular() {
+        return celular;
+    }
+
+    public void setCelular(Celular celular) {
+        this.celular = celular;
+        if (celular != null && celular.getUsuario() != this){
+            celular.setUsuario(this);    
         }
-    }
-
-    public Pasaporte getPasaporte() {
-        return pasaporte;
-    }
-
-    public void setPasaporte(Pasaporte pasaporte) {
-        this.pasaporte = pasaporte;
     }
 
     @Override
     public String toString() {
-        return "Nombre del Titular: " + nombre + " | dni: " + dni;
+        return "| Nombre Usuario: " + nombre + " | DNI: " + dni + celular;
+        
     }
-
+     
+    
+    
 }

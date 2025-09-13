@@ -38,4 +38,10 @@ public class Foto {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Foto: " + imagen + formato; 
+    }
+
+    
 }
