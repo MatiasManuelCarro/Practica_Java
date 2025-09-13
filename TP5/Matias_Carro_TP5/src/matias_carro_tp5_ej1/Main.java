@@ -8,7 +8,7 @@ package matias_carro_tp5_ej1;
  *
  * @author Matias
  */
-public class Matias_Carro_TP5_Ej1 {
+public class Main {
 
     /**
      * @param args the command line arguments
