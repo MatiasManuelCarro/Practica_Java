@@ -18,7 +18,7 @@ public class CuentaBancaria {
     public CuentaBancaria(String cbu, String saldo, String codigo, String ultimaModificacion) {
         this.cbu = cbu;
         this.saldo = saldo;
-        this.claveSeguridad = new ClaveSeguridad("123456", "14/09/2025");
+        this.claveSeguridad = new ClaveSeguridad(codigo, ultimaModificacion);
     }
 
     public String getCbu() {
@@ -46,13 +46,20 @@ public class CuentaBancaria {
     }
 
     public void setTitular(Titular titular) {
-        if (titular != null) {
-            this.titular = titular;
+        this.titular = titular;
+        if (titular != null && titular.getCuentaBancaria() != this) {
+            titular.setCuentaBancaria(this);
         }
+
     }
 
     public ClaveSeguridad getClaveSeguridad() {
         return claveSeguridad;
+    }
+
+    @Override
+    public String toString() {
+        return "\nCBU cuenta: " + cbu + "\nSaldo cuenta: $" + saldo + titular;
     }
 
 }

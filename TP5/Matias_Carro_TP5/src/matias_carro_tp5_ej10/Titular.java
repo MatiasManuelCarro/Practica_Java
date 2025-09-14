@@ -44,9 +44,17 @@ public class Titular {
     }
 
     public void setCuentaBancaria(CuentaBancaria cuentaBancaria) {
-        if (cuentaBancaria != null) {
-            this.cuentaBancaria = cuentaBancaria;
+        this.cuentaBancaria = cuentaBancaria;
+        if (cuentaBancaria != null && cuentaBancaria.getTitular() != this) {
+            cuentaBancaria.setTitular(this);
+
         }
     }
 
+    @Override
+    public String toString() {
+        return "\nNombre del titular: " + nombre + "\nDNI: " + dni;
+    }
+
+    
 }

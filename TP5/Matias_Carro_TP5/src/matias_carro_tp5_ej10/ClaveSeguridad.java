@@ -9,6 +9,7 @@ package matias_carro_tp5_ej10;
  * @author Matias
  */
 public class ClaveSeguridad {
+
     private String codigo;
     private String ultimaModificacion;
 
@@ -24,7 +25,10 @@ public class ClaveSeguridad {
     public String getUltimaModificacion() {
         return ultimaModificacion;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Clave de seguridad: " + codigo + "\nUltima fecha de modificacion: " + ultimaModificacion;
+
+    }
 }
-  
