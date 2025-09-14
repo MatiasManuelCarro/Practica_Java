@@ -32,7 +32,9 @@ public class Cliente {
     }
 
     public void setDni(String dni) {
-        this.dni = dni;
+        if (dni != null) {
+            this.dni = dni;
+        }
     }
 
     //comienzan las asociaciones
@@ -42,20 +44,18 @@ public class Cliente {
 
     public void setTarjetaDeCredito(TarjetaDeCredito tarjetaDeCredito) {
         this.tarjetaDeCredito = tarjetaDeCredito;
-        if (tarjetaDeCredito != null && tarjetaDeCredito.getCliente() != this){
+        if (tarjetaDeCredito != null && tarjetaDeCredito.getCliente() != this) {
             tarjetaDeCredito.setCliente(this);
         }
     }
-    
-    public String getCliente(){
-        return nombre + tarjetaDeCredito;
+
+    public String getCliente() {
+        return "Nombre cliente: " + nombre + " | DNI del cliente: " + dni + tarjetaDeCredito;
     }
 
     @Override
     public String toString() {
         return "Nombre cliente: " + nombre + " | DNI del cliente: " + dni;
     }
-    
-    
 
 }
