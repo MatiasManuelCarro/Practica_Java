@@ -10,8 +10,8 @@ package matias_carro_tp5_ej13;
  */
 public class CodigoQR {
 
-    private String valor;
-    private Usuario usuario; //asociacion unidireccional
+    private final String valor;
+    private final Usuario usuario; //asociacion unidireccional
 
     public CodigoQR(String valor, Usuario usuario) {
         this.valor = valor;
@@ -23,20 +23,9 @@ public class CodigoQR {
         return valor;
     }
 
-    public void setValor(String valor) {
-        if (valor != null) {
-            this.valor = valor;
-        }
-    }
 
     public Usuario getUsuario() {
         return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        if (usuario != null) {
-            this.usuario = usuario;
-        }
     }
 
     @Override

@@ -9,11 +9,9 @@ package matias_carro_tp5_ej13;
  * @author Matias
  */
 public class GeneradorQR {
-    private String valor;
-    private Usuario usuario;
-    
+      
     public static void generar(String valor, Usuario usuario){
-        CodigoQR codigoQR1 = new CodigoQR(valor, usuario); 
-        System.out.println("Codigo QR generado: " + valor + usuario);
+        CodigoQR codigoQRGenerado = new CodigoQR(valor, usuario); 
+        System.out.println("Codigo QR generado: " + codigoQRGenerado);
     }
 }
