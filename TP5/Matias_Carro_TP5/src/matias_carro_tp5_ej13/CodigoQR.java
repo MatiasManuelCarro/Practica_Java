@@ -18,11 +18,9 @@ public class CodigoQR {
         this.usuario = usuario;
     }
 
-    
     public String getValor() {
         return valor;
     }
-
 
     public Usuario getUsuario() {
         return usuario;
@@ -32,7 +30,5 @@ public class CodigoQR {
     public String toString() {
         return "Valor: " + valor + " " + usuario;
     }
-    
-    
 
 }
