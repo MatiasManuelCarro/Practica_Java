@@ -12,19 +12,22 @@ public class Libro {
 
     private String titulo;
     private String autor;
-    static String editorial = "independiente";
-    private String editorialPersonalizada;
+    private String editorial;
+    private static String editorialPorDefecto = "independiente";
+    
+    
 
     //Constructor
     public Libro(String titulo, String autor) {
         this.titulo = titulo;
         this.autor = autor;
+        this.editorial = editorialPorDefecto;
     }
 
-    public Libro(String titulo, String autor, String editorialPersonalizada) {
+    public Libro(String titulo, String autor, String editorial) {
         this.titulo = titulo;
         this.autor = autor;
-        this.editorialPersonalizada = editorialPersonalizada;
+        this.editorial = editorial;
     }
 
     public String getTitulo() {
@@ -53,19 +56,11 @@ public class Libro {
         }
     }
 
-    public static String getEditorial() {
-        return editorial;
-    }
-
-    public static void setEditorial(String nuevaEditorial) {
-        if (nuevaEditorial != null) {
-            Libro.editorial = nuevaEditorial;
-        }
-    }
-
     public static void cambiarEditorial(String nuevaEditorial) {
-        editorial = nuevaEditorial;
+        Libro.editorialPorDefecto = nuevaEditorial;
     }
+    
+
 
     @Override
     public String toString() {
